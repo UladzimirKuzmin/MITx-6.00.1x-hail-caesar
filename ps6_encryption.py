@@ -206,17 +206,17 @@ def decryptStory():
     returns: string - story in plain text
     """
 
+
+    return str(applyShift(getStoryString(), findBestShift(loadWords(), getStoryString())))
 #
 # Build data structures used for entire session and run encryption
 #
 
 if __name__ == '__main__':
     # To test findBestShift:
-    wordList = loadWords()
-    s = applyShift('ThE quiz is... haRd!', 23)
-    print s
-    bestShift = findBestShift(wordList, s)
-    print bestShift
+    #wordList = loadWords()
+    #s = applyShift('ThE quiz is... haRd!', 23)
+    #bestShift = findBestShift(wordList, s)
     #assert applyShift(s, bestShift) == 'Hello, world!'
     # To test decryptStory, comment the above four lines and uncomment this line:
-    #    decryptStory()
+    decryptStory()
